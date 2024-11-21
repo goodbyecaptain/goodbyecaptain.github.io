@@ -1,0 +1,342 @@
+/* 0. reset.css 적용하기 */
+@import "reset.css";
+
+img{width: 200px;}
+/* 1. 전체 페이지의 CSS 작성하기 -> body */
+
+body {
+  /* 1.1 페이지 전체의 배경 이미지를 설정하자 */
+  background-image: url(../images/bg.png);
+
+  /* 1.2 페이지 전체의 글자 관련 속성을 설정하자 */
+  font-size: 16px;
+  font-family: 'arial', 'Apple SD Gothic Neo', 'NanumGothic', sans-serif;
+  color: #333333;
+}
+
+/* 2. 헤더의 CSS 작성하기 -> header  */
+header {
+
+  /* 2.1 헤더 영역을 가운데 정렬하자 */
+  width: 1240px;
+  margin: 0 auto 44px;
+}
+
+/* 2.1.5 헤더안의 로고 이미지 크기 조정  */
+header h1 img {
+  width: 400px;
+}
+
+/* 2.2 로고를 가운데 정렬하고 여백을 넣자 */
+h1 {
+  text-align: center;
+  padding: 20px 0px 16px;
+}
+
+/* 3. 글로벌 네비게이션의 CSS 작성하기 */
+header nav ul {
+  /* 3.1 내비게이션 항목을 가로로 배열하고 가운데 정렬하자 */
+  display: flex;
+
+
+  /* 3.2 내비게이션 항목을 가운데 정렬하자 */
+  justify-content: center;
+
+
+  /* 3.3 내비게이션을 장식하자 */
+  border-top: 2px solid #7c5d48;
+  border-bottom: 2px solid #7c5d48;
+  background-color: rgba(255, 255, 255, 0.42);
+  padding: 12px 0px 10px;
+}
+
+
+
+/* 3.4 내비게이션 항목 사이에 여백을 넣자 */
+header nav ul li {
+  margin: 0 20px;
+}
+
+
+
+
+/* 3.5 내비게이션 글자를 장식하자 */
+header nav ul li a {
+  font-size: 22px;
+  font-weight: bold;
+  color: #7c5d48;
+}
+
+
+
+/* 3.6 마우스 커서를 올렸을 때의 효과를 넣어보자 */
+header nav ul li a:hover {
+  color:#C8102E;
+  text-decoration: underline double #C8102E 2px;
+  /* text-decoration: 선의위치 선의종류 선의색상 선의두께;  */
+}
+
+
+
+/* 5. 메인 영역과 사이드바의 CSS 작성하기 */
+/* 메인 영역과 사이드바 수평으로 배치하기 */
+/* two columns (div) */
+/* HTML에 <div>태그를 추가하자 */
+/* <div> <main></main> <aside></aside> </div> */
+
+
+div.container {
+    /* 5.1 <div> 영역을 헤더 영역에 맞추자 */
+    width: 1240px;
+    margin: 0 auto 50px;
+  
+    /* 5.2 메인 영역과 사이드바를 수평으로 배치하자 */
+    display: flex;
+  }
+  
+  
+  /* 5.3 메인 영역과 사이드바의 가로 폭을 조정하자 */
+  /* main */
+  main {
+    flex-basis: 920px;
+    background-color: #ffffff;
+  }
+  
+  /* sidebar */
+  aside {
+    flex-basis: 284px;
+  }
+  
+  /* 5.4 메인 영역과 사이드바에 여백을 넣자 */
+  div.container {
+    justify-content: space-between;
+  }
+  
+
+/* 6. 메인 영역과 사이드바의 박스 장식하기 */
+/* 6.1 메인 영역 박스를 장식하자 */
+main {
+    border-radius: 16px;
+    padding: 62px 72px 32px 72px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+    /* box-shadow: x축위치 y축위치 흐림and확산 그림자색상; */
+  }
+  
+  
+  /* 6.2 사이드바 박스를 장식하자 */
+  aside nav {
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+  }
+  
+
+/* 7. 사이드바 공통 스타일 작성하기 */
+/* 7.1 로컬 내비게이션의 제목을 장식하자 */
+aside nav h2 {
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #7c5d48;
+  }
+  
+  /* 7.2 로컬 내비게이션의 글자 크기를 바꾸자 */
+  aside nav ul {
+    font-size: 14px;
+  }
+
+
+
+/* 8. Category 내비게이션 장식하기 */
+/* 8.1 HTML에 class 속성을 추가하자 */
+/* 8.2 내비게이션 항목을 장식하자 */
+.categoryNav ul li {
+  list-style-type: square;
+  color: #7c5d48;
+  margin: 0 0 16px 20px;
+}
+
+/* 8.3 글자 색을 검은색으로 되돌리자 */
+.categoryNav ul li a {
+  color: #333333;
+}
+
+
+
+/* 9. Recent Articles 내비게이션 장식하기 */
+/* 9.1 테두리와 여백을 조정하자 */
+.recentNav ul li {
+    border-bottom: 1px solid #7c5d48;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+  }
+  
+  /* 9.2 콘텐츠 표시 방법을 변경하자 */
+  .recentNav ul {
+    height: 240px;
+    overflow: hidden scroll;
+  }
+
+
+/*  9.3 .banner 디자인 및 완성 */
+.banner {
+
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 이미지 위에 반투명 레이어 */
+    text-align: center;
+    color: #fff;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .banner-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .banner-text p {
+    font-size: 16px;
+  }
+  
+  .btn {
+    font-size: 14px;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #c8102e;
+    /* 리버풀 레드 */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  
+/* 아티클 영역과 푸터의 CSS 장성하기 */
+/* 10. 게시글 타이틀 장식하기 */
+/* 10.1 게시글의 타이틀을 크게 만들자 */
+article h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }  
+
+/* 11. 발행 날짜 장식하기 */
+/* 11.1 글자와 배경을 장식하자  */
+time {
+    background-color: #91c777;
+    border-radius: 0px 22px 22px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+  
+  
+    /* 11.2 안쪽 여백과 형태 장식 */
+    padding: 11px 23px 10px 18px;
+    display: inline-block;
+  }
+  
+  
+  
+  /* 11.3 class 속성을 추가하고 여백을 조정하자 */
+  /* <p class="postdate">  */
+  .postdate {
+    margin-bottom: 26px;
+  }
+
+/* 12. 메인 이미지 여백 장식하기 */
+/* 12.1 class 속성을 추가하여 여백을 조정하자 */
+/* <p class="lfc_win"> */
+/* 12.2  */
+.lfc_win {
+    margin-bottom: 26px;
+    text-align: center;
+  }
+  
+  .lfc_win img {
+    width: 600px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px grey;
+    /* 이미지 아래에 그림자 추가 */
+  }
+  
+  .lfc_win img:hover {
+    transform: scale(1.1);
+    /* 마우스를 올리면 이미지 확대 */
+  }
+
+/* 13. 게시글 소제목 장식 */
+/* 13.1 소제목을 조정하자 */
+article h3 {
+    border-bottom: 2px solid #6ab547;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+  
+  
+    /* 13.2 소제목 앞에 아이콘을 넣자  */
+    background-image: url(../images/soccer_icon.png);
+    background-repeat: no-repeat;
+  
+    background-position: left bottom;
+    padding: 20px 10px 10px 60px;
+  }
+  
+  /* 13.3 figure 태그 장식 */
+  section figure img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  section figure figcaption {
+  
+    color: #c8102e;
+    text-align: center;
+    margin-top: 10px;
+  
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+  
+
+
+/* 14. 게시글 본문 장식하기 */
+article section p {
+    /* 14.1 행간을 조정하자  */
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  
+  
+  /* 14.2 섹션의 여백을 조정하자  */
+  article section {
+    margin-bottom: 50px;
+  }
+
+  /* 15. 푸터 영역 장식하기 */
+footer {
+    background-color: #523f2e;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 10px 20px;
+  }
